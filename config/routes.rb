@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/loggedin', to: 'welcome#loggedin'
+
+  post '/save_image', to: 'welcome#save_image'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

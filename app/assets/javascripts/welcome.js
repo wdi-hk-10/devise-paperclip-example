@@ -39,4 +39,27 @@ $(document).ready(function(){
       console.log(resp);
     });
   });
+
+  $('#upload-image').on('submit', function(e){
+    e.preventDefault();
+    var formData = new FormData();
+    var imageFile = $('#upload-image input[name="image"]')[0].files[0];
+    formData.append('user[image]', imageFile);
+
+    $.ajax({
+      method: 'POST',
+      url: '/save_image',
+      dataType:"JSON",
+      cache: false,
+      contentType: false,
+      processData: false,
+      data: formData,
+      success: function(resp){
+        console.log(resp);
+      },
+      error: function(resp){
+        console.log(resp);
+      }
+    });
+  });
 });
