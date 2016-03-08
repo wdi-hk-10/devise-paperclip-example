@@ -1,0 +1,9 @@
+{
+  "name": "devise_demo",
+  "version": "1.0",
+  "main": "",
+  "private": true,
+  "dependencies": {
+    "j-toker": "~0.0.9"
+  }
+}
