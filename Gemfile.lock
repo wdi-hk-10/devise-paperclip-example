@@ -37,6 +37,9 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    aws-sdk-v1 (1.66.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -67,6 +70,10 @@ GEM
     devise_token_auth (0.1.37)
       devise (> 3.5.2, < 4.1)
       rails (< 6)
+    dotenv (2.0.2)
+    dotenv-rails (2.0.2)
+      dotenv (= 2.0.2)
+      railties (~> 4.0)
     erubis (2.7.0)
     execjs (2.6.0)
     globalid (0.3.6)
@@ -171,10 +178,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk-v1
   bower
   byebug
   coffee-rails (~> 4.1.0)
   devise_token_auth
+  dotenv-rails
   jbuilder (~> 2.0)
   jquery-rails
   omniauth
@@ -188,4 +197,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
