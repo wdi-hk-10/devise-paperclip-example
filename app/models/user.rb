@@ -12,4 +12,9 @@ class User < ActiveRecord::Base
   }
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
+  has_many :created_events, class_name: 'Event', foreign_key: 'creator_id'
+
+  has_many :user_participating_events, foreign_key: 'participator_id'
+  has_many :participating_events, through: :user_participating_events, class_name: 'Event'
 end
